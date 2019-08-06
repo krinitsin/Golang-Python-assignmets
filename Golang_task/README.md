@@ -19,8 +19,8 @@ Total: 18
 стандартные библиотеки.
 
 ## Решение
-main.go  Исходный код   
-urls.txt Список URL
+main.go    Исходный код   
+urls.txt   Список URL
 
 # Запуск
 ``` go run main.go ```
