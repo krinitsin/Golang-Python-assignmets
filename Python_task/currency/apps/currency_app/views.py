@@ -1,4 +1,5 @@
 # -*- coding: utf-8 -*-
+import os
 from django.shortcuts import render
 from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import redirect
@@ -9,7 +10,7 @@ from .models import Currency
 
 @csrf_exempt
 def currency_page(request):
-    if request.method == "POST":
+    if request.method == "POST" or os.path.isfile('./Currencies.xml') != True:
         url = 'https://www.cbr.ru/scripts/XML_daily.asp'
         # creating HTTP response object from given url
         resp = requests.get(url)
