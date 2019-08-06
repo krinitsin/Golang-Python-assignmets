@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<title>THIS IS SPARTAA</title>
+<style>
+#currencies_table {
+  font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#currencies_table td, #currencies_table th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#currencies_table tr:nth-child(even){background-color: #f2f2f2;}
+
+#currencies_table tr:hover {background-color: #ddd;}
+
+#currencies_table th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+    <p>Work IN PROGRESS</p>
+</header>
+  <table id="currencies_table">
+    <thead>
+       <p><strong>{{ name }} for {{last_update}}</strong></p>
+       <form action="/" method="POST">
+         <input type="submit" name="submit-btn" value="update button">
+       </form>
+      <tr>
+        <th>Code</th>
+        <th>CharCode</th>
+        <th>Nominal</th>
+        <th>Name</th>
+        <th>Value</th>
+      </tr>
+    </thead>
+    <tbody>
+      {% for row in currencyitems %}
+        <tr>
+          <td>{{ row.NumCode }}</td>
+          <td>{{ row.CharCode }}</td>
+          <td>{{ row.Nominal }}</td>
+          <td>{{ row.Name }}</td>
+          <td>{{ row.Value }}</td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+<br>

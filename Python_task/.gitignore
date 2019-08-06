@@ -1,0 +1,4 @@
+*.py[co]
+*.db
+local_settings.py
+schedule/static/
